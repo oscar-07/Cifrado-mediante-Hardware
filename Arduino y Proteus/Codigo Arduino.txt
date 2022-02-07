@@ -1,0 +1,251 @@
+#define LED2 2
+#define LED3 3
+#define LED4 4
+#define LED5 5
+#define LED6 6
+#define LED7 7
+#define LED8 8
+#define LED9 9
+#define LED10 10
+#define LED11 11
+#define LED12 12
+#define LED13 13
+#define A0 A0
+#define A1 A1
+#define A2 A2
+#define A3 A3
+
+
+
+String exito = " verdad ";
+char caja[9];
+String entrada;
+String salida;
+
+void setup() {
+  Serial.begin(9600);
+  
+  pinMode(LED2, OUTPUT);
+  pinMode(LED3, OUTPUT);
+  pinMode(LED4, OUTPUT);
+  pinMode(LED5, OUTPUT);
+  pinMode(LED6, OUTPUT);
+  pinMode(LED7, OUTPUT);
+  pinMode(LED8, OUTPUT);
+  pinMode(LED9, OUTPUT);
+  pinMode(LED10, INPUT);
+  pinMode(LED11, INPUT);
+  pinMode(LED12, INPUT);
+  pinMode(LED13, INPUT);
+  pinMode(A0, INPUT);
+  pinMode(A1, INPUT);
+  pinMode(A2, INPUT);
+  pinMode(A3, INPUT);
+
+  
+
+  
+  digitalWrite(LED2, LOW);
+  digitalWrite(LED3, LOW);
+  digitalWrite(LED4, LOW);
+  digitalWrite(LED5, LOW);
+  digitalWrite(LED6, LOW);
+  digitalWrite(LED7, LOW);
+  digitalWrite(LED8, LOW);
+  digitalWrite(LED9, LOW);
+  digitalWrite(LED10, LOW);
+  digitalWrite(LED11, LOW);
+  digitalWrite(LED12, LOW);
+  digitalWrite(LED13, LOW);
+  digitalWrite(A0, LOW);
+  digitalWrite(A1, LOW);
+  digitalWrite(A2, LOW);
+  digitalWrite(A3, LOW);
+  
+}
+
+void loop() {
+  
+  if (Serial.available()) {
+
+     entrada = Serial.readString();
+
+    entrada.toCharArray(caja, 9);
+
+    for (byte i = 0; i < 9; i = i + 1) {
+
+      //delay(800);
+
+      
+      if (i == 0) {
+        if(caja [i]=='1'){
+          digitalWrite(LED2, HIGH);
+          //Serial.println(caja [i]);
+        }else{
+          digitalWrite(LED2, LOW);
+          //Serial.println(caja [i]);
+        }
+     }
+      if (i == 1) {
+        if(caja [i]=='1'){
+          digitalWrite(LED3, HIGH);
+          //Serial.println(caja [i]);
+        }else{
+          digitalWrite(LED3, LOW);
+          //Serial.println(caja [i]);
+        }
+     }
+     if (i == 2) {
+        if(caja [i]=='1'){
+          digitalWrite(LED4, HIGH);
+          //Serial.println(caja [i]);
+        }else{
+          digitalWrite(LED4, LOW);
+          //Serial.println(caja [i]);
+        }
+     }
+     if (i == 3) {
+        if(caja [i]=='1'){
+          digitalWrite(LED5, HIGH);
+          //Serial.println(caja [i]);
+        }else{
+          digitalWrite(LED5, LOW);
+          //Serial.println(caja [i]);
+        }
+     }
+
+     if (i == 4) {
+        if(caja [i]=='1'){
+          digitalWrite(LED6, HIGH);
+          //Serial.println(caja [i]);
+        }else{
+          digitalWrite(LED6, LOW);
+          //Serial.println(caja [i]);
+        }
+     }
+
+     if (i == 5) {
+        if(caja [i]=='1'){
+          digitalWrite(LED7, HIGH);
+          //Serial.println(caja [i]);
+        }else{
+          digitalWrite(LED7, LOW);
+          //Serial.println(caja [i]);
+        }
+     }
+
+     if (i == 6) {
+        if(caja [i]=='1'){
+          digitalWrite(LED8, HIGH);
+          //Serial.println(caja [i]);
+        }else{
+          digitalWrite(LED8, LOW);
+          //Serial.println(caja [i]);
+        }
+     }
+     if (i == 7) {
+        if(caja [i]=='1'){
+          digitalWrite(LED9, HIGH);
+          //Serial.println(caja [i]);
+        }else{
+          digitalWrite(LED9, LOW);
+          //Serial.println(caja [i]);
+        }
+     }
+
+    }
+
+    
+    if (digitalRead(LED10) == HIGH) {
+      salida.concat("1");
+      //Serial.println(1);
+    }else{
+      salida.concat("0");
+      //Serial.println(0);
+    }
+    delay(800);
+    
+    if (digitalRead(LED11) == HIGH) {
+      salida.concat("1");
+     //Serial.println(1);
+    }else{
+      salida.concat("0");
+      //Serial.println(0);
+    }
+    delay(800);
+    
+    if (digitalRead(LED12) == HIGH) {
+      salida.concat("1");
+      //Serial.println(1);
+    }else{
+      salida.concat("0");
+      //Serial.println(0);
+    }
+    delay(800);
+    
+    if (digitalRead(LED13) == HIGH) {
+      salida.concat("1");
+      //Serial.println(1);
+    }else{
+      salida.concat("0");
+      //Serial.println(0);
+    }
+    delay(800);
+
+    if (digitalRead(A0) == HIGH) {
+      salida.concat("1");
+      //Serial.println(1);
+    }else{
+      salida.concat("0");
+      //Serial.println(0);
+    }
+    delay(800);
+
+    if (digitalRead(A1) == HIGH) {
+      salida.concat("1");
+      //Serial.println(1);
+    }else{
+      salida.concat("0");
+      //Serial.println(0);
+    }
+    delay(800);
+
+    if (digitalRead(A2) == HIGH) {
+      salida.concat("1");
+      //Serial.println(1);
+    }else{
+      salida.concat("0");
+      //Serial.println(0);
+    }
+    delay(800);
+
+    if (digitalRead(A3) == HIGH) {
+      salida.concat("1");
+     //Serial.println(1);
+    }else{
+      salida.concat("0");
+      //Serial.println(0);
+    }
+    delay(800);
+    //Serial.println(" * ");
+    Serial.println(salida);
+    salida="";
+
+  }
+  digitalWrite(LED2, LOW);
+  digitalWrite(LED3, LOW);
+  digitalWrite(LED4, LOW);
+  digitalWrite(LED5, LOW);
+  digitalWrite(LED6, LOW);
+  digitalWrite(LED7, LOW);
+  digitalWrite(LED8, LOW);
+  digitalWrite(LED9, LOW);
+  digitalWrite(LED10, LOW);
+  digitalWrite(LED11, LOW);
+  digitalWrite(LED12, LOW);
+  digitalWrite(LED13, LOW);
+  digitalWrite(A0, LOW);
+  digitalWrite(A1, LOW);
+  digitalWrite(A2, LOW);
+  digitalWrite(A3, LOW);
+}

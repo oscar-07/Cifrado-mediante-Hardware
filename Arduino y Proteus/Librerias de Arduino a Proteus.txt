@@ -1,0 +1,10 @@
+Colocar el contenido de la carpeta LIBRARY en su carpeta correspondiente.
+
+ArduinoTEP.LIB
+BLOGEMBARCADO.LIB
+UltraSonicSensor.HEX
+ArduinoTEP.IDX
+
+
+C:\Program Files (x86)\Labcenter Electronics\Proteus 8 Professional\DATA\LIBRARY
+(En dado caso de que no se encuentre la carpeta en la siguiente ruta buscarla por las inmediacianes de la misma).
