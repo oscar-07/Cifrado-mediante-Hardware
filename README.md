@@ -28,7 +28,7 @@ En el presente proyecto, se realizo una Aplicacion emulada de un circuito integr
 
 ![Error](a6.png)
 
-## Acceso en dado casod de proporcionar la clave
+## Acceso en dado caso de proporcionar la clave
 
 ![acceso](a7.png)
 
