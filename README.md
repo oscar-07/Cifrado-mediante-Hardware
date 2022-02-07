@@ -16,7 +16,7 @@ En el presente proyecto, se realizo una Aplicacion emulada de un circuito integr
 
 ![arduino](a2.png)
 
-## Emulación de un panel fisico.
+## Emulación de un panel fisico (La clave por default es "10101010").
 
 ![Citas](a3.png)
 
