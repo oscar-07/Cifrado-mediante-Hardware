@@ -10,7 +10,7 @@
 
 En el presente proyecto, se realizo una Aplicacion emulada de un circuito integrado con cifrado de hardware con arduino y cifrado por medio de token.
 
-![Circuito integrado](a2.png)
+![Circuito integrado](a1.png)
 
 ## Arduino con salidas correspondientes al circuito anterior.
 
